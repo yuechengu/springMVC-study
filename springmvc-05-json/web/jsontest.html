@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+
+        // 编写一个JavaScript对象
+        let user = {
+            name: "gyc",
+            age: 22,
+            sex: "male"
+        };
+
+        // js对象 -> json对象
+        let jsonObj = JSON.stringify(user);
+
+        // json对象 -> js对象
+        let jsObj = JSON.parse(jsonObj);
+
+        console.log(user);
+        console.log(jsonObj);
+        console.log(jsObj);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
