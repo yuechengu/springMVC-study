@@ -2,6 +2,7 @@ package com.learning.controller;
 
 import com.learning.pojo.User;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
@@ -11,11 +12,6 @@ import java.util.List;
 
 @RestController
 public class AjaxController {
-
-    @RequestMapping("/t1")
-    public String test(){
-        return "hello";
-    }
 
     @RequestMapping("/a1")
     public void a1(String name, HttpServletResponse response) throws IOException {
@@ -28,6 +24,7 @@ public class AjaxController {
     }
 
     @RequestMapping("/a2")
+    @ResponseBody
     public List<User> a2(){
         List<User> userList = new ArrayList<User>();
 
@@ -40,24 +37,24 @@ public class AjaxController {
     }
 
     @RequestMapping("/a3")
-    public String ajax3(String name,String pwd){
-        String msg = "";
-        //模拟数据库中存在数据
-        if (name!=null){
-            if ("admin".equals(name)){
-                msg = "OK";
+    @ResponseBody
+    public String a3(String name, String pwd) {
+        String msg="";
+        if (name!=null) {
+            if ("gyc".equals(name)) {
+                msg="ok";
             }else {
-                msg = "用户名输入错误";
+                msg="用户名错误";
             }
         }
-        if (pwd!=null){
-            if ("123456".equals(pwd)){
-                msg = "OK";
+        if (pwd!=null) {
+            if ("123456".equals(pwd)) {
+                msg="ok";
             }else {
-                msg = "密码输入有误";
+                msg="密码错误";
             }
         }
-        return msg; //由于@RestController注解，将msg转成json格式返回
+        return msg;
     }
 
 }

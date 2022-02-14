@@ -87,7 +87,7 @@ public class UserController {
         User to_java_user = JSON.toJavaObject(jsonObject1, User.class);
         System.out.println("JSON.toJavaObject(jsonObject1, User.class)==>"+to_java_user);
 
-        return "测试fastJSON";
+        return "测试fastJSON --结果查看在java后台";
 
     }
 

@@ -19,7 +19,7 @@
                             "<td>" + data[i].sex + "</td>" +
                             "</tr>"
                     }
-
+                    // 获取body中的#content，将js中的html变量导入进去
                     $("#content").html(html);
                 });
             })

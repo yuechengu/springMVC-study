@@ -1,16 +1,28 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: gyc82
-  Date: 2022/1/30
-  Time: 19:30
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>json测试</title>
   </head>
   <body>
-  $END$
+  <h3>json测试</h3>
+  <table>
+    <tr>
+      <td>/j1</td>
+      <td>json对象</td>
+    </tr>
+    <tr>
+      <td>/j2</td>
+      <td>json数组</td>
+    </tr>
+    <tr>
+      <td>/j3</td>
+      <td>日期格式化</td>
+    </tr>
+    <tr>
+      <td>/j4</td>
+      <td>fastjson测试</td>
+    </tr>
+  </table>
+
   </body>
 </html>
